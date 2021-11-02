@@ -5,6 +5,15 @@ Special thanks to MatterCloud (Matter Web Services Inc.) for continue this versa
 
 # What's new
 
+1.0.19
++ Support `await` for `build` and `send`
+
+1.0.18
++ Support `auto_config` to select different rpc point at runtime
+
+1.0.17
++ Support `sensible` `metasv` rpc endpoints
+
 1.0.12
 + Support `prepare(key,callback)` feature
   call `prepare` when privatKey is confirmed can get cached utxos, so the call to send/build will be faster.
