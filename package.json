@@ -1,0 +1,43 @@
+{
+  "name": "nbpay",
+  "version": "1.0.19",
+  "description": "bitcoin sv payment lib with NBdomain support",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 30000",
+    "test_scratch": "mocha --timeout 30000 --grep '1 insufficient input and force specific input utxo provide unlocking script'",
+    "test_change": "mocha --timeout 30000 --grep 'changeAddress'",
+    "build": "browserify index.js --standalone nbpay > dist/nbpay.js && uglifyjs dist/nbpay.js > dist/nbpay.min.js"
+  },
+  "keywords": [
+    "bsv",
+    "bitcoinsv",
+    "bitcoin",
+    "blockchain",
+    "cryptocurrency"
+  ],
+  "author": "bloodchen ( nbdomain.com )",
+  "license": "MIT",
+  "unpkg": "dist/nbpay.min.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bsv": "^1.2.0",
+    "bsv-coinselect": "^4.2.5",
+    "buffer": "^5.2.1",
+    "mingo": "^2.2.4",
+    "minimist": "^1.2.5",
+    "text-encoder": "0.0.4"
+  },
+  "peerDependencies": {
+    "bsv": "^1.2.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "dotenv": "^6.2.0",
+    "mocha": "^9.1.1",
+    "uglify-es": "^3.3.9",
+    "uglifyjs": "^2.4.11"
+  }
+}
