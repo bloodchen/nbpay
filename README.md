@@ -5,6 +5,15 @@ Special thanks to MatterCloud (Matter Web Services Inc.) for continue this versa
 
 # What's new
 
+1.0.12
++ Support `prepare(key,callback)` feature
+  call `prepare` when privatKey is confirmed can get cached utxos, so the call to send/build will be faster.
+  The cache will become invalid after 30 seconds
+
+  `key`: privateKey
+  `callback(err,data)`: (optional)
+
+1.0.10
 + Support `woc` (whatsonchain.com) as rpc endpoints by default  ( mattercloud removed free service )
 
 
